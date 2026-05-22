@@ -1,0 +1,15 @@
+# Compiled binaries
+bin/
+# Log files
+output.txt
+# Datasets
+data/
+
+# Object and dependency files
+obj/
+*.o
+*.d
+
+# OS and Editor files
+.DS_Store
+.vscode/
