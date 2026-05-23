@@ -40,3 +40,4 @@ Run the generated binary with the following 6 arguments:
 ```bash
 time ./bin/ensemble_forest data/covtype.data 54 data/covtype.data 100 20 5
 ```
+The example command above uses data/covtype.data for both the <train_filepath> and <test_filepath> arguments. Because it tests on the exact same data it trained on, the resulting metric will reflect the model's training accuracy. To evaluate true out-of-sample performance, ensure you pass a distinct, separate CSV file for testing.
