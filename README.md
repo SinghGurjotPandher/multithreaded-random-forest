@@ -11,7 +11,7 @@ A high-performance, multithreaded Random Forest classification engine built from
 ## Performance Metrics
 Tested on the UCI Forest Covertype Dataset (581,012 rows, 54 features):
 *   **Speed:** Built an ensemble of 100 decision trees (max depth 20) in **~43 seconds**, achieving a **5.1x parallel speedup** over sequential execution (>500% CPU utilization).
-*   **Accuracy:** Achieved an inference accuracy of **80.6%**.
+*   **Accuracy:** Achieved a training accuracy of **80.6%**.
 
 ## Compilation
 This project includes a `Makefile` utilizing `-O3` optimization flags for maximum C compiler loop vectorization. 
@@ -40,4 +40,4 @@ Run the generated binary with the following 6 arguments:
 ```bash
 time ./bin/ensemble_forest data/covtype.data 54 data/covtype.data 100 20 5
 ```
-The example command above uses data/covtype.data for both the <train_filepath> and <test_filepath> arguments. Because it tests on the exact same data it trained on, the resulting metric will reflect the model's training accuracy. To evaluate true out-of-sample performance, ensure you pass a distinct, separate CSV file for testing.
+*The example command above uses data/covtype.data for both the <train_filepath> and <test_filepath> arguments. Because it tests on the exact same data it trained on, the resulting metric will reflect the model's training accuracy. To evaluate true out-of-sample performance, ensure you pass a distinct, separate CSV file for testing.*
